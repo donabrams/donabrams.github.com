@@ -173,10 +173,10 @@ body {
   font-size: 14pt;
   text-align: left;
 }
-section h2 {
-  font-size: 25px;
+section > h2 {
+  font-size: 200%;
   color: #887763;
-  margin-bottom: 20px;
+  margin-bottom: 0.75em;
 }
 .vcard .hide {
   display: none;
@@ -300,45 +300,44 @@ body > nav.sticky a.active:after {
   margin: -4em 2em 0em 2em;
   padding-top: 6.5em;
 }
-#experience h2 {
+#experience > h2 {
   display: none;
 }
 #experience .employer {
-  color: #887763;
-  font-size: 20px;
+  color: #413543;
+  font-size: 125%;
 }
 #experience .dateRange {
   float: right;
-  margin-right: 30px;
-  color: #887763;
+  color: #413543;
 }
 #experience .jobTitle {
-  margin-top: 5px;
-  color: #413543;
-  margin-bottom: 15px;
+  color: #887763;
+  margin-top: 0.1em;
+  margin-bottom: 0.5em;
 }
 #experience article {
   margin-left: auto;
   margin-right: auto;
   max-width: 40em;
-  margin-bottom: 40px;
+  margin-bottom: 2em;
 }
-#experience article h2 {
-  margin-bottom: 8px;
+#experience article h1 {
+  font-size: 80%;
 }
 #experience ul {
   margin-left: 20px;
   margin-top: 7px;
   margin-bottom: 5px;
   list-style: disc;
-  color: #413543;
+  color: #887763;
   font-size: 17px;
 }
 #experience ul li {
   list-style: disc;
 }
 #experience strong {
-  color: #887763;
+  color: #413543;
   font-weight: 600;
   letter-spacing: 1px;
 }
@@ -370,7 +369,7 @@ body > nav.sticky a.active:after {
   font-size: 18px;
 }
 #competencies table tbody {
-  color: #413543;
+  color: #887763;
   font-size: 15px;
 }
 #competencies table tbody tr {
@@ -396,7 +395,7 @@ body > nav.sticky a.active:after {
 }
 #competencies .workingOn {
   text-decoration: bold;
-  color: #887763;
+  color: #413543;
   font-size: 110%;
 }
 body > footer {
