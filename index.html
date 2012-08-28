@@ -3,7 +3,7 @@
 <head>
   <title>Donald Abrams - Web Programmer</title>
   <link rel="profile" href="http://microformats.org/profile/hcard"/>
-  <meta name="viewport" content="width=100%;initial-scale=1.0; maximum-scale=1.0;minimum-scale=1.0;user-scalable=no"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
   <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'/>
   <link href="donabrams.me.css" rel='stylesheet' type='text/css'/>
   <script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.4.min.js"></script>
@@ -12,48 +12,57 @@
   $(function() {
     $("body > nav").waypoint(function(event, direction) {
       $(this).toggleClass('sticky', direction === "down");
-      event.stopPropagation();
-    })
+    });
+    $.each(["experience", "competencies"], function(i, v) {
+      console.log(v);
+      $("#" + v).waypoint(function(event, direction) {
+        $("body > nav a").removeClass("active")
+          .filter("[href='#" + v + "']")
+          .addClass("active");
+        }, {offset: '15%'});
+    });
   });
   </script>
 </head>
 <body>
-<header class="vcard" id="contact">  
+<header class="vcard" id="contact">
   <h1 class="fn">Donald Abrams</h1>
-  <h2 class="title">Web Programmer</h2>
-  <section id="contactInfo">
-    <img class="photo" alt="Photo of Donald Abrams" src="don.jpg"/>
-    <p class="adr">
-      <span class="type">home</span>
-      <span class="street-address">44 Sanford Drive</span><br />
-      <span class="locality">Newark, DE</span>, 
-      <span class="country-name">USA</span> 
-      <span class="postal-code">19713</span>
-    </p>
-    <p class="tel">
-       <span class="type">cell</span>
-       <span class="value hide">+1</span> (<span class="value">302</span>) <span class="value">533</span>-<span class="value">8584</span>
-    </p>
-    <p><a href="mailto:donabrams+RemoveThisIfNotSpam@gmail.com" title="email me" class="email">DonAbrams@gmail.com</a></p>
-    <p><a href="https://github.com/donabrams" title="github">Github</a> <a href="https://twitter.com/DonTAbrams" title="twitter">Twitter</a> <a href="http://donabrams.tumblr.com" title="blog">Blog</a></p>
-  </section>
-</header>  
+  <h2 class="title">Entrepreneur &amp; Web Developer</h2>
+  <img class="photo" alt="Photo of Donald Abrams" src="don2.jpg"/>
+</header>
+<section id="contactInfo">
+  <p class="adr">
+    <span class="type">home</span>
+    <span class="street-address">636 E Clement Street</span><br />
+    <span class="locality">Baltimore, MD</span>, 
+    <span class="country-name">USA</span> 
+    <span class="postal-code">21230</span>
+  </p>
+  <p class="tel">
+     <span class="type">cell</span>
+     <span class="value countyCode">+1</span> (<span class="value">302</span>) <span class="value">533</span>-<span class="value">8584</span>
+  </p>
+  <p><a href="mailto:donabrams+RemoveThisIfNotSpam@gmail.com" title="email me" class="email">DonAbrams@gmail.com</a></p>
+  <p class="social">
+    <a href="https://twitter.com/DonTAbrams" title="twitter">twitter</a>
+    <a href="https://github.com/donabrams" title="github">github</a>
+    <a href="http://donabrams.tumblr.com" title="blog">tumblr</a></p>
+</section>
+<section id="statement">
+    <p>Developer of world-class software that increases quality of life</p>
+</section>
 <nav>
   <ul>
-    <li><a href="#statement" title="Go to Statement">Statement</a></li>
+    <li><a href="#projects" title="Go to Projects">Projects</a></li>
     <li><a href="#experience" title="Go to Experience">Experience</a></li>
     <li><a href="#competencies" title="Go to Competencies">Competencies</a></li>
-      <li><a href="#contact" title="Go to Contact Information">Contact Info</a></li>
   </ul>
 </nav>
-<section id="statement">
-    <p>I am a web programmer transitioning from Java to Ruby and JavaScript. I want to make world-class, open source software that increases quality of life.</p>
-  </section>
   <section id="experience">
     <h2>Experience</h2>
     <article>
       <header>
-        <h1 class="dateRange">June 2012 - Present</h2>
+        <h1 class="dateRange">June 2012&ndash;Present</h2>
         <h2 class="employer">Digital Harbor Foundation</h1>
         <h3 class="jobTitle">Tech Director</h3>
       </header>
@@ -68,7 +77,7 @@
     </article>
     <article>
       <header>
-        <h1 class="dateRange">June 2007 - May 2012</h2>
+        <h1 class="dateRange">June 2007&ndash;May 2012</h2>
         <h2 class="employer">University of Delaware</h1>
         <h3 class="jobTitle">Programmer/Analyst</h3>
       </header>
@@ -87,7 +96,7 @@
     </article>
     <article>
       <header>
-        <h1 class="dateRange">November 2011 - Present</h2>
+        <h1 class="dateRange">November 2011&ndash;Present</h2>
         <h2 class="employer">Digital Harbor Apps</h1>
         <h3 class="jobTitle">Developer, Founder</h3>
       </header>
@@ -100,7 +109,7 @@
     </article>
     <article>
       <header>
-        <h1 class="dateRange">October 2010 - Present</h2>
+        <h1 class="dateRange">October 2010&ndash;April 2012</h2>
         <h2 class="employer">Barrel of Makers</h1>
         <h3 class="jobTitle">Board Member, Founder</h3>
       </header>
@@ -253,6 +262,7 @@
   </section>
 </section>
 <footer>
+  <nav><a href="#">top</a>
   <p>&copy; 2012 Donald Abrams</p>
 </footer>
 </head>
