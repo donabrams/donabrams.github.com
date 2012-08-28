@@ -4,318 +4,8 @@
   <title>Donald Abrams - Web Programmer</title>
   <link rel="profile" href="http://microformats.org/profile/hcard"/>
   <meta name="viewport" content="width=100%;initial-scale=1.0; maximum-scale=1.0;minimum-scale=1.0;user-scalable=no"/>
-  <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
-  <style>
- /* YUI 3 reset */ html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}li{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}
- /* Pages styles */
-    body {
-      font-family: sans-serif;
-      background-color:#333;
-      background: -webkit-linear-gradient(left, #282828, #333 3%, #333);
-    }
-    body > header {
-      padding-top: 30px;
-      display: block;
-    }
-    section {
-      margin-left: 300px;
-      margin-bottom: 100px;
-    }
-    section h2 {
-      font-size: 25px;
-      color:white;
-      margin-bottom: 20px;
-    }
-    .vcard .hide {
-      display: none;
-    }  
-    .vcard .type {
-      display: none;
-    }
-    body > header h1 {
-      font-size: 80px;
-      color: #eee;
-      margin-left: 40px;
-      font-family: 'Merriweather', serif;
-    }
-    body > header h2 {
-      margin-left: 180px;
-      margin-top: -30px;
-      font-size: 60px;
-      color: #bbb;
-      font-family: 'Merriweather', serif;
-      display: inline-block;
-    }
-    #contactInfo {
-      position:absolute;
-      top:0;
-      right: 0;
-      float: right;
-      padding: 20px;
-      padding-right: 40px;
-      color: #ddd;
-      margin:15px;
-      margin-right: 40px;
-    }
-    #contactInfo a {
-      color: #ddd;
-      text-decoration: none;
-      cursor:hand;
-    }
-    #contactInfo a.email {
-      position: relative;
-      margin-right:15px;
-    }
-    #contactInfo a.email:before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: -30px;
-      width: 9px;
-      border-width: 6px;
-      border-style: solid;
-      border-color: #ddd;
-      border-bottom-left-radius: 2px;
-      border-bottom-right-radius: 2px;
-      margin-top: -7px;
-      background: transparent;
-    }
-    #contactInfo a.email:after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      z-index: 10;
-      right: -26px;
-      width: 11px;
-      height: 11px;
-      border-width: 0 1px 1px 0;
-      border-style: solid;
-      border-color: #333;
-      margin-top: -12px;
-      background: transparent;
-      -webkit-transform: rotate(39deg) skew(-12deg);
-      -moz-transform: rotate(39deg) skew(-12deg);
-      -o-transform: rotate(39deg) skew(-12deg);
-      transform: rotate(39deg) skew(-12deg);
-    }
-    #contactInfo a:hover {
-      color:white;
-    } 
-    #contactInfo a.email:hover:before {
-      border-color: white;
-    }
-    #contactInfo p {
-      margin-bottom: 8px;
-      margin-left: 120px;
-    }
-    #contactInfo img {
-      width: 105px;
-      height: 110px;
-      float: left;
-      border-radius: 13px;
-      box-shadow: 3px 3px 12px #444;
-    }
-    body > nav {
-      float: left;
-      width: 300px;
-      padding-top: 40px;
-      overflow:hidden;
-      font-size: 20px;
-      line-height: 300%;
-    }
-    body > nav.sticky {
-      position:fixed;
-      top:0;
-      left:0;
-    }
-    body > nav li {
-      margin-left: 40px;
-    }
-    body > nav a {
-      color: #ddd;
-      text-decoration:none;
-    }
-    body > nav a:hover {
-      color:white;
-    }
-    #statement {
-      padding-top: 90px;
-      margin-right: 10px;
-      font-size: 22px;
-      color: white;
-      text-align: center;
-    }
-    #experience .employer {
-      color: white;
-      font-size: 20px;
-    }
-    #experience .dateRange {
-      float: right;
-      margin-right: 30px;
-      color: #ddd;
-    }
-    #experience .jobTitle {
-      margin-top: 5px;
-      color: #bbb;
-      margin-bottom: 15px;
-    }
-    #experience article {
-      margin-bottom: 40px;
-    }
-    #experience article h2 {
-      margin-bottom: 8px; 
-    }
-    #experience ul {
-      margin-left: 20px;
-      margin-top: 7px;
-      margin-bottom: 5px;
-      list-style: disc;
-      color: #bbb;
-      font-size: 17px;
-    }
-    #experience li {
-      list-style: disc;
-    }
-    #experience strong {
-      color: #ddd;
-      font-weight: 600;
-      letter-spacing:1px;
-    }
-    #competencies caption {
-      text-align:left;
-    }
-    #competencies caption p {
-      color:#777;
-      font-size: 13px;
-      margin-left: 10px;
-      padding-bottom: 20px;
-    }
-    #competencies table {
-      width: 98%;
-    }
-    #competencies thead th {
-      color: #ddd;
-      text-decoration: bold;
-      padding: 10px;
-      padding-right: 15px;
-      padding-left: 5px;
-      font-size: 18px;
-    }
-    #competencies tbody {
-      color: #777;
-      font-size: 15px;
-    }
-    #competencies tbody tr {
-      border-bottom: 1px solid #555;
-    }
-    #competencies tbody tr:last-child {
-      border-bottom: none;
-    }
-    #competencies tbody td {
-      padding-top: 15px;
-      padding-bottom: 15px;
-      padding-left: 15px;
-      border-right: 1px solid #555;
-    }
-    #competencies tbody td:first-child {
-      padding-right: 10px;
-      text-decoration: bold;
-      font-size: 18px;
-      color: #aaa;
-    }
-    #competencies tbody td:last-child {
-      border-right: none;
-    }
-    #competencies .workingOn {
-      text-decoration: bold;
-      color: #ddd;
-      font-size: 110%;
-    }
-    body > footer {
-      padding-top: 20px;
-      text-align:center;
-      width: 100%;
-      color: #ddd;
-      clear:both;
-      background: -webkit-linear-gradient(top, rgba(48,48,48,0), rgba(16, 16, 16,1) 15%, rgba(16, 16, 16,1) );
-    }
-    body > footer p {
-      padding: 50px;
-      color: #aaa;
-    }
-/* Abover is good for widths over 1065 */
-@media screen and (max-width: 1065px) {
-  body > header h1 {
-    font-size: 60px;
-    margin-left: 30px;
-  }
-  body > header h2 {
-    margin-left: 60px;
-    font-size: 40px;
-  }
-  #contactInfo {
-    float: none;
-    padding: 0;
-  }
-  body > nav {
-    position: static;
-    float: none;
-    margin-left: 0;
-    padding-top: 0;
-    overflow: visible;
-    width: auto;
-    text-align: center;
-    background-color: #333;
-    background: -webkit-linear-gradient(left, #282828, #333 3%, #333);
-    height: 3em;
-    width: 100%;
-  }
-  body > nav.sticky {
-    border-bottom: 1px solid #222;
-  }
-  body > nav ul li {
-    display: inline-block;
-  }
-  section {
-    margin-left: 0;
-  }
-  #contactInfo {
-    margin-left: 20px;
-  }
-  body > header img {
-    margin-right: 20px;
-  }
-  section {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-}
-@media screen and (max-width: 850px) {
-  #contactInfo {
-    position: static;
-  }
-  body > nav li {
-    margin-left: 20px;
-  }
-}
-@media screen and (max-width: 500px) {
-  body > header h1 {
-    font-size: 54px;
-  }
-  body > header h2 {
-    font-size: 30px;
-  }
-  #contactInfo {
-    position: static;
-  }
-  body > nav {
-    font-size: 18px;
-  }
-  body > nav li {
-    margin-left: 15px;
-  }
-}
-  </style>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'/>
+  <link href="donabrams.me.css" rel='stylesheet' type='text/css'/>
   <script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.4.min.js"></script>
   <script src="waypoints.min.js"></script>
   <script>
@@ -363,7 +53,22 @@
     <h2>Experience</h2>
     <article>
       <header>
-        <h1 class="dateRange">June 2007 - Present</h2>
+        <h1 class="dateRange">June 2012 - Present</h2>
+        <h2 class="employer">Digital Harbor Foundation</h1>
+        <h3 class="jobTitle">Tech Director</h3>
+      </header>
+      <ul>
+        <li><strong>Developed and maintained web sites and applications</strong></li>
+        <li><strong>Worked with domain experts</strong> to determine appropriate solutions for achieving a vision</li>
+        <li><strong>Determined the minimal viable product</strong> that would allow us to collect metrics to prove or disprove predetermined hypothesis</li>
+        <li><strong>Planned and budgeted</strong> technical needs for projects and spaces in the Rec2Tech program</li>
+        <li><strong>Mentored</strong> a junior programmer</li>
+        <li><strong>Evaluated technical solutions</strong> for supporting a wide-reaching media site and internal processes</li>
+      </ul>
+    </article>
+    <article>
+      <header>
+        <h1 class="dateRange">June 2007 - May 2012</h2>
         <h2 class="employer">University of Delaware</h1>
         <h3 class="jobTitle">Programmer/Analyst</h3>
       </header>
@@ -416,9 +121,9 @@
       <thead>
       	<tr>
       		<th>Category</th>
-      		<th>Expert at</th>
-      		<th>In-depth experience with</th>
-      		<th>Some experience with</th>
+      		<th>Deployed many times to prod</th>
+      		<th>Deployed at least once to prod</th>
+      		<th>Experience with, but nothing in prod</th>
       	</tr>
       </thead>
       <tbody>
@@ -426,44 +131,45 @@
           <td>Programming Languages</td>
           <td><ul>
             <li>Java</li>
-          </ul></td>
-          <td><ul>
             <li class="workingOn">JavaScript</li>
-            <li>Ruby</li>
-            <li>Bash</li>
           </ul></td>
           <td><ul>
+            <li>Bash</li>
             <li class="workingOn">CoffeeScript</li>
-            <li>Erlang</li>
-            <li>Python</li>
-            <li>Clojure</li>
+            <li>Ruby</li>
             <li>PHP</li>
+          </ul></td>
+          <td><ul>
             <li>C</li>
+            <li>Clojure</li>
+            <li class="workingOn">Elixir</li>
+            <li>Erlang</li>
+            <li>ObjC</li>
+            <li>Python</li>
           </ul></td>
         </tr>
         <tr>
           <td>Frameworks &amp; Libraries</td>
           <td><ul>
             <li>jQuery</li>
-            <li>Struts2</li>
             <li>JUnit</li>
+            <li>J2EE</li>
+            <li>Struts2</li>
           </ul></td>
           <td><ul>
-            <li>J2EE</li>
-            <li>Spring</li>
             <li>Hibernate</li>
             <li>Rails</li>
+            <li>Spring</li>
             <li>TestUnit</li>
+            <li class="workingOn">Underscore</li>
           </ul></td>
           <td><ul>
-            <li class="workingOn">Derby</li>
-            <li class="workingOn">Underscore</li>
-            <li class="workingOn">Vows</li>
-            <li>EventMachine</li>
-            <li>RSpec</li>
             <li>Cucumber</li>
-            <li>Wordpress</li>
             <li>Drupal</li>
+            <li>EventMachine</li>
+            <li class="workingOn">Mocha/Chai</li>
+            <li>RSpec</li>
+            <li>Wordpress</li>
           </ul></td>
         </tr>
         <tr>
@@ -472,73 +178,62 @@
             <li>Oracle</li>
           </ul></td>
           <td><ul>
-            <li>Postgres</li>
             <li>CouchDB</li>
-            <li>SQLite</li>
+            <li class="workingOn">MongoDB</li>
+            <li>Postgres</li>
+            <li class="workingOn">Redis</li>
           </ul></td>
           <td><ul>
             <li>MySQL</li>
-            <li class="workingOn">Redis</li>
-            <li class="workingOn">MongoDB</li>
+            <li>SQLite</li>
           </ul></td>
         </tr>
         <tr>
           <td>Middleware</td>
           <td><ul>
             <li>Tomcat</li>
-            <li>Apache</li>
           </ul></td>
           <td><ul>
-            <li class="workingOn">Node.js</li>
+            <li>Apache</li>
             <li class="workingOn">Heroku</li>
             <li>Jetty</li>
+            <li class="workingOn">Node.js</li>
           </ul></td>
           <td><ul>
             <li>Amazon Web Services</li>
+            <li>Pagoda Box</li>
           </ul></td>
         </tr>
         <tr>
           <td>Markup Languages</td>
           <td><ul>
-            <li>HTML</li>
+            <li>CSS3</li>
+            <li>HTML5</li>
             <li>JSON</li>
-          </ul></td>
-          <td><ul>
-            <li>CSS</li>
-            <li>XML</li>
           </ul></td>
           <td><ul>
             <li class="workingOn">Jade</li>
             <li class="workingOn">Stylus</li>
+            <li>XML</li>
+          </ul></td>
+          <td><ul>
             <li>HAML</li>
             <li>SASS</li>
           </ul></td>
         </tr>
         <tr>
-          <td>Tools</td>
-          <td><ul>
-          </ul></td>
-          <td><ul>
-            <li>Eclipse</li>
-            <li class="workingOn">TextMate</li>
-            <li>Git</li>
-            <li>SVN</li>
-          </ul></td>
-          <td><ul>
-            <li>VIM</li>
-          </ul></td>
-        </tr>
-        <tr>
           <td>OS</td>
           <td><ul>
+            <li class="workingOn">Linux</li>
           </ul></td>
           <td><ul>
-            <li>Linux</li>
+            <li>Solaris</li>
           </ul></td>
           <td><ul>
             <li>OSX</li>
-            <li>Solaris</li>
             <li>Windows</li>
+            <li>iOS</li>
+            <li>Android</li>
           </ul></td>
         </tr>
           <tr>

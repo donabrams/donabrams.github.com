@@ -1,0 +1,287 @@
+transition(n)
+  transition n
+  -webkit-transition n
+  -moz-transition n
+  -o-transition n
+  -ms-transition n
+  
+transform(n)
+  transform n
+  -webkit-transform n
+  -moz-transform n
+  -o-transform n
+  -ms-transform n
+
+transform-origin(n)
+  transform-origin n
+  -webkit-transform-origin n
+  -moz-transform-origin n
+  -o-transform-origin n
+  -ms-transform-origin n
+  
+lighttext = #ddd
+darktext = #bbb
+darkertext = #777
+bgcolor = #333
+darkest = #222
+bordercolor = #555
+labelcolor = #aaa
+//#282828
+  
+@import "html5-reset"
+
+body 
+  font-family sans-serif
+  background-color bgcolor
+  background -webkit-linear-gradient(left, darken(bgcolor, 21%), bgcolor 3%, bgcolor)
+  > header 
+    padding-top 30px
+    display block
+
+section 
+  margin-left 300px
+  margin-bottom 100px
+  h2 
+    font-size 25px
+    color white
+    margin-bottom 20px
+
+.vcard
+  .hide 
+    display none
+  .type 
+    display none
+
+body > header 
+  h1 
+    font-size 80px
+    color #eee
+    margin-left 40px
+    font-family 'Merriweather', serif
+  h2 
+    margin-left 180px
+    margin-top -30px
+    font-size 60px
+    color darktext
+    font-family 'Merriweather', serif
+    display inline-block
+
+#contactInfo 
+  position absolute
+  top 0
+  right 0
+  float right
+  padding 20px
+  padding-right 40px
+  color lighttext
+  margin 15px
+  margin-right 40px
+  a 
+    color lighttext
+    text-decoration none
+    cursorhand
+    &.email 
+      position relative
+      margin-right 15px
+      &:before 
+        content ""
+        position absolute
+        top 50%
+        right -30px
+        width 9px
+        border-width 6px
+        border-style solid
+        border-color lighttext
+        border-bottom-left-radius 2px
+        border-bottom-right-radius 2px
+        margin-top -7px
+        background transparent
+      &:hover:before
+        border-color white
+      &:after 
+        content ""
+        position absolute
+        top 50%
+        z-index 10
+        right -26px
+        width 11px
+        height 11px
+        border-width 0 1px 1px 0
+        border-style solid
+        border-color bgcolor
+        margin-top -12px
+        background transparent
+        transform (rotate(39deg) skew(-12deg))
+    &:hover 
+      color white
+
+#contactInfo p 
+  margin-bottom 8px
+  margin-left 120px
+
+#contactInfo img 
+  width 105px
+  height 110px
+  float left
+  border-radius 13px
+  box-shadow 3px 3px 12px bgcolor
+
+body > nav 
+  float left
+  width 300px
+  padding-top 40px
+  overflow hidden
+  font-size 20px
+  line-height 300%
+  &.sticky 
+    position fixed
+    top 0
+    left 0
+  li 
+    margin-left 40px
+  a 
+    color lighttext
+    text-decoration none
+    &:hover 
+      color white
+
+#statement 
+  padding-top 90px
+  margin-right 10px
+  font-size 22px
+  color white
+  text-align center
+
+#experience 
+  .employer 
+    color white
+    font-size 20px
+  .dateRange 
+    float right
+    margin-right 30px
+    color lighttext
+  .jobTitle 
+    margin-top 5px
+    color darktext
+    margin-bottom 15px
+  article 
+    margin-bottom 40px
+    h2 
+      margin-bottom 8px 
+  ul 
+    margin-left 20px
+    margin-top 7px
+    margin-bottom 5px
+    list-style disc
+    color darktext
+    font-size 17px
+    li 
+      list-style disc
+  strong 
+    color lighttext
+    font-weight 600
+    letter-spacing 1px
+
+#competencies 
+
+#competencies
+  caption 
+    text-align left
+    p 
+      color darkertext
+      font-size 13px
+      margin-left 10px
+      padding-bottom 20px
+  table 
+    width 98%
+    thead th 
+      color lighttext
+      text-decoration bold
+      padding 10px
+      padding-right 15px
+      padding-left 5px
+      font-size 18px
+    tbody 
+      color darkertext
+      font-size 15px
+      tr 
+        border-bottom 1px solid bordercolor
+        &:last-child 
+          border-bottom none
+        td 
+          padding-top 15px
+          padding-bottom 15px
+          padding-left 15px
+          border-right 1px solid bordercolor
+          &:first-child 
+            padding-right 10px
+            text-decoration bold
+            font-size 18px
+            color labelcolor
+          &:last-child 
+            border-right none
+  .workingOn 
+    text-decoration bold
+    color lighttext
+    font-size 110%
+body > footer 
+  padding-top 20px
+  text-align right
+  width 100%
+  color lighttext
+  clearboth
+  background -webkit-linear-gradient(top, #1110, #111f 15%, #111f )
+  p 
+    padding 50px
+    color darktext
+
+/* Abover is good for widths over 1065 */
+@media screen and (max-width: 1065px) 
+  body > header
+    h1 
+      font-size 60px
+      margin-left 30px
+    h2 
+      margin-left 60px
+      font-size 40px
+    img 
+      margin-right 20px
+  #contactInfo 
+    float none
+    padding 0
+    margin-left 20px
+  body > nav 
+    position static
+    float none
+    margin-left 0
+    padding-top 0
+    overflow visible
+    width auto
+    text-align center
+    background-color bgcolor
+    background -webkit-linear-gradient(left, darken(bgcolor, 21%), bgcolor 3%, bgcolor)
+    height 3em
+    width 100%
+    &.sticky 
+      border-bottom 1px solid darkest
+    ul li 
+      display inline-block
+  section 
+    margin-left 20px
+    margin-right 20px
+@media screen and (max-width: 850px) 
+  #contactInfo 
+    position static
+  body > nav li 
+    margin-left 20px
+@media screen and (max-width: 500px) 
+  body > header
+    h1 
+      font-size 54px
+    h2 
+      font-size 30px
+  body > nav 
+    font-size 18px
+    li 
+      margin-left 15px
+  
