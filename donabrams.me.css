@@ -186,7 +186,7 @@ section > h2 {
 }
 body > header {
   display: inline-block;
-  height: 38em;
+  height: 30em;
   width: 38em;
   position: relative;
   border-right: 1.25em solid #887763;
@@ -196,7 +196,7 @@ body > header img {
   top: 0;
   left: 0;
   width: 38em;
-  height: 38em;
+  height: 30em;
   float: left;
   border-radius: 3px;
   opacity: 0.5;
@@ -204,7 +204,7 @@ body > header img {
 body > header h1 {
   font-size: 400%;
   color: #887763;
-  margin-top: 7.71em;
+  margin-top: 5.35em;
   margin-left: 0.25em;
   font-family: 'Merriweather', serif;
 }
