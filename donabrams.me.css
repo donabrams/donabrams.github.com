@@ -258,6 +258,8 @@ cursorhand
   border-top: 1.15em solid #887763;
 }
 #statement {
+  position: relative;
+  top: -1px;
   padding: 3em 2em;
   color: #655c51;
   text-align: center;
@@ -292,6 +294,7 @@ body > nav li {
 body > nav a {
   color: #887763;
   text-decoration: none;
+  padding: 0.25em 1em;
 }
 body > nav a:hover {
   color: #887763;
@@ -302,7 +305,7 @@ body > nav.sticky a {
 body > nav.sticky a.active:after {
   position: absolute;
   content: "";
-  bottom: -0.3em;
+  bottom: -0.1em;
   left: 50%;
   width: 0;
   height: 0;

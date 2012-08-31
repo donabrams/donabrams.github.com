@@ -111,6 +111,8 @@ body > header
   border-top 1.15em solid headline
 
 #statement 
+  position relative
+  top -1px
   padding 3em 2em
   p
     font-size 220%
@@ -140,6 +142,7 @@ body > nav
   a 
     color headline
     text-decoration none
+    padding .25em 1em
     &:hover 
       color headline
   &.sticky a
@@ -147,7 +150,7 @@ body > nav
     &.active:after
       position absolute
       content ""
-      bottom -.3em
+      bottom -.1em
       left 50%
       width 0
       height 0
