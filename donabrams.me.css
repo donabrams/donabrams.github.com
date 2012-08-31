@@ -1,3 +1,5 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans");
+@import url("http://fonts.googleapis.com/css?family=Lora");
 html,
 body,
 div,
@@ -106,7 +108,7 @@ q:after {
 }
 a {
   background: transparent;
-  font-size: 100%;
+  font-size: inherit;
   margin: 0;
   padding: 0;
   vertical-align: baseline;
@@ -168,7 +170,7 @@ h6 {
   font-weight: normal;
 }
 body {
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background-color: #eee;
   font-size: 14pt;
   text-align: left;
@@ -186,34 +188,46 @@ section > h2 {
 }
 body > header {
   display: inline-block;
-  height: 30em;
+  height: 38em;
   width: 38em;
   position: relative;
   border-right: 1.25em solid #887763;
 }
 body > header img {
   position: absolute;
+  width: 19.01em;
+  height: 19.01em;
+  opacity: 0.5;
+}
+body > header img.photo1 {
   top: 0;
   left: 0;
-  width: 38em;
-  height: 30em;
-  float: left;
-  border-radius: 3px;
-  opacity: 0.5;
+}
+body > header img.photo2 {
+  top: 0;
+  left: 19em;
+}
+body > header img.photo3 {
+  top: 19em;
+  left: 19em;
+}
+body > header img.photo4 {
+  top: 19em;
+  left: 0em;
 }
 body > header h1 {
   font-size: 400%;
   color: #887763;
-  margin-top: 5.35em;
+  margin-top: 7.71em;
   margin-left: 0.25em;
-  font-family: 'Merriweather', serif;
+  font-family: 'Lora', serif;
 }
 body > header h2 {
   margin-left: 1em;
   margin-top: -0.5em;
   font-size: 225%;
   color: #413543;
-  font-family: 'Merriweather', serif;
+  font-family: 'Lora', serif;
   display: inline-block;
 }
 #contactInfo {
@@ -247,26 +261,26 @@ cursorhand
   padding: 3em 2em;
   color: #655c51;
   text-align: center;
+  border-bottom: 1.25em solid #887763;
+  margin-bottom: 1em;
 }
 #statement p {
   font-size: 220%;
   line-height: 1.5em;
 }
 body > nav {
-  border-top: 0.75em solid #887763;
-  font-size: 150%;
-  line-height: 300%;
+  font-size: 125%;
+  line-height: 200%;
   width: 100%;
   height: 3em;
 }
 body > nav.sticky ul {
-  border-top: 0.75em solid #887763;
   width: 100%;
   background: #eee;
   position: fixed;
   top: 0;
   left: 0;
-  box-shadow: 0 0.25em 0.25em #887763;
+  box-shadow: 0 0.15em 0.15em #887763;
 }
 body > nav ul {
   text-align: center;
@@ -288,12 +302,12 @@ body > nav.sticky a {
 body > nav.sticky a.active:after {
   position: absolute;
   content: "";
-  bottom: -1em;
+  bottom: -0.3em;
   left: 50%;
   width: 0;
   height: 0;
   margin-left: -0.25em;
-  border: 0.5em solid transparent;
+  border: 0.4em solid transparent;
   border-bottom-color: #887763;
 }
 #experience {
@@ -326,20 +340,20 @@ body > nav.sticky a.active:after {
   font-size: 80%;
 }
 #experience ul {
-  margin-left: 20px;
-  margin-top: 7px;
-  margin-bottom: 5px;
+  font-size: 100%;
+  margin-left: 1.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
   list-style: disc;
   color: #887763;
-  font-size: 17px;
 }
 #experience ul li {
   list-style: disc;
+  margin-bottom: 0.25em;
 }
 #experience strong {
   color: #413543;
   font-weight: 600;
-  letter-spacing: 1px;
 }
 #competencies {
   padding-top: 6.5em;
@@ -352,25 +366,25 @@ body > nav.sticky a.active:after {
   text-align: left;
 }
 #competencies caption p {
+  font-size: 80%;
   color: #413543;
-  font-size: 13px;
-  margin-left: 10px;
-  padding-bottom: 20px;
+  margin-left: 0.75em;
+  padding-bottom: 1.5em;
 }
 #competencies table {
   width: 98%;
 }
 #competencies table thead th {
+  font-size: 100%;
   color: #887763;
   text-decoration: bold;
-  padding: 10px;
-  padding-right: 15px;
-  padding-left: 5px;
-  font-size: 18px;
+  padding: 0.5em;
+  padding-right: 1em;
+  padding-left: 0.25em;
 }
 #competencies table tbody {
+  font-size: 90%;
   color: #887763;
-  font-size: 15px;
 }
 #competencies table tbody tr {
   border-bottom: 1px solid #e0d3e3;
@@ -379,24 +393,23 @@ body > nav.sticky a.active:after {
   border-bottom: none;
 }
 #competencies table tbody tr td {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 15px;
+  padding: 1em;
+  padding-right: 0;
   border-right: 1px solid #e0d3e3;
 }
 #competencies table tbody tr td:first-child {
-  padding-right: 10px;
+  font-size: 105%;
+  padding-right: 0.5em;
   text-decoration: bold;
-  font-size: 18px;
   color: #655c51;
 }
 #competencies table tbody tr td:last-child {
   border-right: none;
 }
 #competencies .workingOn {
+  font-size: 110%;
   text-decoration: bold;
   color: #413543;
-  font-size: 110%;
 }
 body > footer {
   padding-top: 6em;
@@ -434,4 +447,37 @@ body > footer p {
   text-align: right;
   padding: 2em;
   color: #413543;
+}
+@media screen and (max-width:945px) {
+  #experience {
+    font-size: 130%;
+  }
+}
+@media screen and (max-width:570px) {
+  #contactInfo {
+    font-size: 130%;
+    margin-right: -5em;
+  }
+}
+@media screen and (max-width:860px) {
+  #competencies caption p {
+    font-size: 100%;
+  }
+}
+@media screen and (max-width:665px) {
+  #competencies table tbody tr td {
+    font-size: 120%;
+  }
+  #competencies table tbody tr td:first-child {
+    font-size: 130%;
+  }
+}
+@media screen and (max-width:515px) {
+  #competencies {
+    margin: 0 1em;
+    font-size: 125%;
+  }
+  body > footer {
+    font-size: 140%;
+  }
 }

@@ -4,12 +4,21 @@
   <title>Donald Abrams - Web Programmer</title>
   <link rel="profile" href="http://microformats.org/profile/hcard"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
-  <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'/>
   <link href="donabrams.me.css" rel='stylesheet' type='text/css'/>
-  <script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.4.min.js"></script>
+  <script src="jquery-1.8.1.min.js"></script>
   <script src="waypoints.min.js"></script>
   <script>
   $(function() {
+    (function($el, scale) {
+      var resize, win;
+      win = $(window);
+      resize = function() {
+        return $el.css('font-size', win.width() / scale);
+      };
+      resize();
+      return win.on('resize', resize);
+    })($("body"), 60.0);
+    
     $("body > nav").waypoint(function(event, direction) {
       $(this).toggleClass('sticky', direction === "down");
     });
@@ -28,7 +37,10 @@
 <header class="vcard" id="contact">
   <h1 class="fn">Donald Abrams</h1>
   <h2 class="title">Entrepreneur &amp; Web Developer</h2>
-  <img class="photo" alt="Photo of Donald Abrams" src="don3.jpeg"/>
+  <img class="photo1" alt="Photo of Donald Abrams" src="don.jpg"/>
+  <img class="photo2" alt="Photo of Donald Abrams" src="don2.jpg"/>
+  <img class="photo3" alt="Photo of Donald Abrams" src="don3.jpg"/>
+  <img class="photo4" alt="Photo of Donald Abrams" src="don4.jpg"/>
 </header>
 <section id="contactInfo">
   <p class="adr"><a href="https://maps.google.com/maps?q=636+e+clement+st,&hl=en&safe=off&hnear=636+E+Clement+St,+Baltimore,+Maryland+21230&gl=us&t=h&z=16">
@@ -49,7 +61,7 @@
     <a href="http://donabrams.tumblr.com" title="blog">tumblr</a></p>
 </section>
 <section id="statement">
-    <p>Developer of world-class software that increases quality of life</p>
+    <p>I develop software to increase quality of life</p>
 </section>
 <nav>
   <ul>
@@ -77,6 +89,19 @@
     </article>
     <article>
       <header>
+        <h1 class="dateRange">November 2011&ndash;Present</h2>
+        <h2 class="employer">Digital Harbor Apps</h1>
+        <h3 class="jobTitle">Developer, Founder</h3>
+      </header>
+      <ul>
+        <li><strong>Collaborated with a new team</strong> to take an idea from a teacher and turn it into a working application over two days, winning first place at Education Hack Day</li>
+        <li><strong>Worked closely with a designer</strong> to implement his design and make incremental changes in a limited amount of time</li>
+        <li><strong>Helped keep the team on track</strong> by setting priorities and focusing on creating a minimum viable product</li>
+        <li><strong>Followed through</strong> after the event to expand user testing to classrooms and continually improve the application based on user feedback</li>
+      </ul>
+    </article>
+    <article>
+      <header>
         <h1 class="dateRange">June 2007&ndash;May 2012</h2>
         <h2 class="employer">University of Delaware</h1>
         <h3 class="jobTitle">Programmer/Analyst</h3>
@@ -92,19 +117,6 @@
         <li>Integrated, deployed, optimized and maintained <strong>Sakai</strong>, a learning management system</li>
         <li>Designed and tested <strong>disaster recovery</strong> strategies for various systems</li>
         <li>Encouraged management to adopt modern development tools and libraries</li>
-      </ul>
-    </article>
-    <article>
-      <header>
-        <h1 class="dateRange">November 2011&ndash;Present</h2>
-        <h2 class="employer">Digital Harbor Apps</h1>
-        <h3 class="jobTitle">Developer, Founder</h3>
-      </header>
-      <ul>
-        <li><strong>Collaborated with a new team</strong> to take an idea from a teacher and turn it into a working application over two days, winning first place at Education Hack Day</li>
-        <li><strong>Worked closely with a designer</strong> to implement his design and make incremental changes in a limited amount of time</li>
-        <li><strong>Helped keep the team on track</strong> by setting priorities and focusing on creating a minimum viable product</li>
-        <li><strong>Followed through</strong> after the event to expand user testing to classrooms and continually improve the application based on user feedback</li>
       </ul>
     </article>
     <article>
@@ -129,10 +141,10 @@
       </caption>
       <thead>
       	<tr>
-      		<th>Category</th>
-      		<th>Deployed many times to prod</th>
-      		<th>Deployed at least once to prod</th>
-      		<th>Experience with, but nothing in prod</th>
+      		<th> </th>
+      		<th>Awesome At</th>
+      		<th>Good At</th>
+      		<th>Love</th>
       	</tr>
       </thead>
       <tbody>

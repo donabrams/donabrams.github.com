@@ -1,3 +1,6 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans')
+@import url('http://fonts.googleapis.com/css?family=Lora')
+
 transition(n)
   transition n
   -webkit-transition n
@@ -31,7 +34,7 @@ lowimportance = #413543
 @import "html5-reset"
 
 body 
-  font-family sans-serif
+  font-family 'Open Sans', sans-serif
   background-color bgcolor
   font-size 14pt
   text-align left
@@ -50,30 +53,38 @@ section
 
 body > header 
   display inline-block
-  height 30em
+  height 38em
   width 38em
   position relative
   img 
     position absolute
-    top 0
-    left 0
-    width 38em
-    height 30em
-    float left
-    border-radius 3px
+    width 19.01em
+    height 19.01em
     opacity .5
+    &.photo1
+      top 0
+      left 0
+    &.photo2
+      top 0
+      left 19em
+    &.photo3
+      top 19em
+      left 19em
+    &.photo4
+      top 19em
+      left 0em
   h1 
     font-size 400%
     color headline
-    margin-top 5.35em
+    margin-top 7.71em
     margin-left .25em
-    font-family 'Merriweather', serif
+    font-family 'Lora', serif
   h2 
     margin-left 1em
     margin-top -.5em
     font-size 225%
     color secondary
-    font-family 'Merriweather', serif
+    font-family 'Lora', serif
     display inline-block
   border-right 1.25em solid headline
 
@@ -106,21 +117,21 @@ body > header
     line-height 1.5em
   color labelcolor
   text-align center
+  border-bottom 1.25em solid headline
+  margin-bottom 1em
 
 body > nav
-  border-top .75em solid headline
-  font-size 150%
-  line-height 300%
+  font-size 125%
+  line-height 200%
   width 100%
   height 3em
   &.sticky ul
-    border-top .75em solid headline
     width 100%
     background bgcolor
     position fixed
     top 0
     left 0
-    box-shadow 0 .25em .25em headline
+    box-shadow 0 .15em .15em headline
   ul
     text-align center
   li 
@@ -136,12 +147,12 @@ body > nav
     &.active:after
       position absolute
       content ""
-      bottom -1em
+      bottom -.3em
       left 50%
       width 0
       height 0
       margin-left -.25em
-      border .5em solid transparent
+      border .4em solid transparent
       border-bottom-color headline
       
 #experience
@@ -167,18 +178,18 @@ body > nav
     h1
       font-size 80%
   ul 
-    margin-left 20px
-    margin-top 7px
-    margin-bottom 5px
+    font-size 100%
+    margin-left 1.5em
+    margin-top .5em
+    margin-bottom .25em
     list-style disc
     color headline
-    font-size 17px
     li 
       list-style disc
+      margin-bottom .25em
   strong 
     color secondary
     font-weight 600
-    letter-spacing 1px
     
 #competencies
   padding-top 6.5em 
@@ -188,42 +199,41 @@ body > nav
   caption 
     text-align left
     p 
+      font-size 80%
       color lowimportance
-      font-size 13px
-      margin-left 10px
-      padding-bottom 20px
+      margin-left .75em
+      padding-bottom 1.5em
   table 
     width 98%
     thead th 
+      font-size 100%
       color headline
       text-decoration bold
-      padding 10px
-      padding-right 15px
-      padding-left 5px
-      font-size 18px
-    tbody 
+      padding .5em
+      padding-right 1em
+      padding-left .25em
+    tbody   
+      font-size 90%
       color headline
-      font-size 15px
       tr 
         border-bottom 1px solid bordercolor
         &:last-child 
           border-bottom none
         td 
-          padding-top 15px
-          padding-bottom 15px
-          padding-left 15px
+          padding 1em
+          padding-right 0
           border-right 1px solid bordercolor
           &:first-child 
-            padding-right 10px
+            font-size 105%
+            padding-right .5em
             text-decoration bold
-            font-size 18px
             color labelcolor
           &:last-child 
             border-right none
   .workingOn 
+    font-size 110%
     text-decoration bold
     color secondary
-    font-size 110%
 body > footer 
   padding-top 6em
   text-align right
@@ -254,3 +264,32 @@ body > footer
     padding 2em
     color secondary
   
+// below 945px, lessen the margin on the sides
+@media screen and (max-width:945px)
+  #experience
+    font-size 130%
+//below 570 px grow the contact information
+@media screen and (max-width:570px)
+  #contactInfo
+    font-size 130%
+    margin-right -5em
+// below 860px, keep the bold key readable
+@media screen and (max-width:860px)
+  #competencies
+    caption p
+      font-size 100%
+// below 665px, keep the table readable
+@media screen and (max-width:665px)
+  #competencies
+    table tbody tr td
+      font-size 120%
+    table tbody tr td:first-child
+      font-size 130%
+// below 515px, keep the table readable
+@media screen and (max-width:515px)
+  #competencies
+    margin 0 1em
+    font-size 125%
+  body > footer
+    font-size 140%
+    
