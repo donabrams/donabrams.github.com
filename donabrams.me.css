@@ -177,7 +177,7 @@ body {
 }
 section > h2,
 caption > h2 {
-  font-size: 200%;
+  font-size: 150%;
   color: #887763;
   margin-bottom: 0.75em;
 }
@@ -201,7 +201,7 @@ body > header img {
     width 19.01em
     height 19.01em
     opacity .5
-    &.photo1
+    &.photo
       top 0
       left 0
     &.photo2
@@ -222,7 +222,7 @@ body > header h1 {
   font-family: 'Lora', serif;
 }
 body > header h2 {
-  margin-left: 1em;
+  margin-left: 5.8em;
   margin-top: -0.5em;
   font-size: 225%;
   color: #413543;
@@ -242,7 +242,8 @@ body > header h2 {
 }
 #contactInfo .type,
 #contactInfo .countyCode,
-#contactInfo .street-address {
+#contactInfo .street-address,
+#contactInfo .web {
   display: none;
 }
 #contactInfo a {
@@ -377,6 +378,7 @@ body > nav.sticky a.active:after {
   padding-bottom: 1.5em;
 }
 #competencies table {
+  font-size: 100%;
   width: 98%;
 }
 #competencies table thead th {
@@ -384,8 +386,7 @@ body > nav.sticky a.active:after {
   color: #887763;
   text-decoration: bold;
   padding: 0.5em;
-  padding-right: 1em;
-  padding-left: 0.25em;
+  padding-left: 0.75em;
 }
 #competencies table tbody {
   font-size: 90%;
@@ -510,6 +511,19 @@ body > footer p {
   body > header {
     border: none;
   }
+  #contactInfo {
+    margin-top: 1em;
+    width: auto;
+    margin-right: 2em;
+    text-align: right;
+    vertical-align: top;
+  }
+  #contactInfo .web {
+    display: inline;
+  }
+  #contactInfo p {
+    margin-bottom: 0.2em;
+  }
   #statement {
     font-size: 100%;
     padding: 0;
@@ -517,23 +531,49 @@ body > footer p {
   }
   #experience {
     margin-top: 0;
+    width: 80%;
     padding: 0;
     font-size: 75%;
   }
   #experience h2 {
     display: block;
+    font-size: 150%;
+  }
+  #experience h1,
+  #experience h3 {
+    color: #aaa !important;
   }
   #experience article {
     max-width: 50em;
+    margin-bottom: 1em;
   }
   body * {
     color: #000 !important;
   }
   #competencies {
-    padding-top: 1em;
+    padding-top: 0;
+  }
+  #competencies table {
+    margin-left: 0.8em;
+    width: 84%;
+    font-size: 60%;
+  }
+  #competencies table caption {
+    margin-left: -0.8em;
+  }
+  #competencies table tbody tr {
+    border-bottom: 1px solid #aaa;
+  }
+  #competencies table tbody tr td {
+    padding: 0.5em;
+    border-right: 1px solid #aaa;
   }
   #competencies h2 {
     display: block;
+    font-size: 175%;
+  }
+  #competencies caption p {
+    display: none;
   }
   #competencies .workingOn {
     font-weight: 600;

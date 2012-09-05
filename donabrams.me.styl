@@ -40,7 +40,7 @@ body
   text-align left
 
 section > h2, caption > h2 
-    font-size 200%
+    font-size 150%
     color headline
     margin-bottom .75em
 
@@ -62,7 +62,7 @@ body > header
     width 19.01em
     height 19.01em
     opacity .5
-    &.photo1
+    &.photo
       top 0
       left 0
     &.photo2
@@ -81,7 +81,7 @@ body > header
     margin-left .25em
     font-family 'Lora', serif
   h2 
-    margin-left 1em
+    margin-left 5.8em
     margin-top -.5em
     font-size 225%
     color secondary
@@ -98,7 +98,7 @@ body > header
   p
     margin-bottom .5em
   color headline
-  .type, .countyCode, .street-address
+  .type, .countyCode, .street-address, .web
     display none
   a 
     color headline
@@ -209,15 +209,15 @@ body > nav
       color lowimportance
       margin-left .75em
       padding-bottom 1.5em
-  table 
+  table
+    font-size 100%
     width 98%
     thead th 
       font-size 100%
       color headline
       text-decoration bold
       padding .5em
-      padding-right 1em
-      padding-left .25em
+      padding-left .75em
     tbody   
       font-size 90%
       color headline
@@ -312,23 +312,53 @@ body > footer
     display none
   #statement, #contactInfo + section, body > header 
     border none
+  #contactInfo
+    margin-top 1em
+    width auto
+    margin-right 2em
+    text-align right
+    vertical-align top
+    .web
+      display inline
+    p
+      margin-bottom .2em
   #statement
     font-size 100%
     padding 0
     margin-top 1em
   #experience
     margin-top 0
+    width 80%
     padding 0
     h2
       display block
+      font-size 150%
+    h1, h3
+      color #aaa !important
     font-size 75%
     article
       max-width 50em
+      margin-bottom 1em
   body *
     color black !important
   #competencies
-    padding-top 1em
+    padding-top 0
+    table
+      margin-left .8em
+      caption
+        margin-left -.8em
+      width 84%
+      font-size 60%
+      tbody tr 
+        border-bottom 1px solid #aaa
+        td 
+          padding .5em
+          border-right 1px solid #aaa
     h2
       display block
+      font-size 175%
+    caption p
+      display none
     .workingOn
       font-weight 600
+    
