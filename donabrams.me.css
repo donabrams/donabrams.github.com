@@ -189,40 +189,42 @@ caption > h2 {
 }
 body > header {
   display: inline-block;
-  height: 7em;
+  height: 38em;
   width: 38em;
   position: relative;
   border-right: 1em solid #887763;
 }
 body > header img {
-  display: none;
-/*
-    position absolute
-    width 19.01em
-    height 19.01em
-    opacity .5
-    &.photo
-      top 0
-      left 0
-    &.photo2
-      top 0
-      left 19em
-    &.photo3
-      top 19em
-      left 19em
-    &.photo4
-      top 19em
-      left 0em
-    */
+  position: absolute;
+  width: 19.01em;
+  height: 19.01em;
+  opacity: 0.5;
+}
+body > header img.photo {
+  top: 0;
+  left: 0;
+}
+body > header img.photo2 {
+  top: 0;
+  left: 19em;
+}
+body > header img.photo3 {
+  top: 19em;
+  left: 19em;
+}
+body > header img.photo4 {
+  top: 19em;
+  left: 0em;
 }
 body > header h1 {
   font-size: 400%;
   color: #887763;
+  margin-top: 7.75em;
   margin-left: 0.25em;
   font-family: 'Lora', serif;
 }
 body > header h2 {
-  margin-left: 5.8em;
+  margin-left: 1em;
   margin-top: -0.5em;
   font-size: 225%;
   color: #413543;
