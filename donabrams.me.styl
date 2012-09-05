@@ -30,7 +30,7 @@ bordercolor = #e0d3e3
 labelcolor = #655c51
 lowimportance = #413543
 //#282828
-  
+
 @import "html5-reset"
 
 body 
@@ -39,8 +39,7 @@ body
   font-size 14pt
   text-align left
 
-section
-  > h2 
+section > h2, caption > h2 
     font-size 200%
     color headline
     margin-bottom .75em
@@ -53,10 +52,12 @@ section
 
 body > header 
   display inline-block
-  height 38em
+  height 7em
   width 38em
   position relative
   img 
+    display none
+    /*
     position absolute
     width 19.01em
     height 19.01em
@@ -73,10 +74,10 @@ body > header
     &.photo4
       top 19em
       left 0em
+    */
   h1 
     font-size 400%
     color headline
-    margin-top 7.71em
     margin-left .25em
     font-family 'Lora', serif
   h2 
@@ -86,16 +87,18 @@ body > header
     color secondary
     font-family 'Lora', serif
     display inline-block
-  border-right 1.25em solid headline
+    margin-bottom -.4em
+  border-right 1em solid headline
 
 #contactInfo 
+  font-size 68% 
   display inline-block
   width 15em
   margin-left 1em
   p
     margin-bottom .5em
   color headline
-  .type, .countyCode
+  .type, .countyCode, .street-address
     display none
   a 
     color headline
@@ -108,7 +111,7 @@ body > header
       content: ''
 
 #contactInfo + section
-  border-top 1.15em solid headline
+  border-top 1em solid headline
 
 #statement 
   position relative
@@ -119,7 +122,7 @@ body > header
     line-height 1.5em
   color labelcolor
   text-align center
-  border-bottom 1.25em solid headline
+  border-bottom 1em solid headline
   margin-bottom 1em
 
 body > nav
@@ -275,7 +278,12 @@ body > footer
 @media screen and (max-width:570px)
   #contactInfo
     font-size 130%
-    margin-right -5em
+    margin-right -4em
+  body > header
+    height 12.7em
+    vertical-align top
+    h1
+      margin-top .7em
 // below 860px, keep the bold key readable
 @media screen and (max-width:860px)
   #competencies
@@ -295,4 +303,32 @@ body > footer
     font-size 125%
   body > footer
     font-size 140%
-    
+@media print
+  body
+    font-size 11pt !important
+    width 100%
+    margin 2em
+  body > nav, body > footer, #statement, #contactInfo .social
+    display none
+  #statement, #contactInfo + section, body > header 
+    border none
+  #statement
+    font-size 100%
+    padding 0
+    margin-top 1em
+  #experience
+    margin-top 0
+    padding 0
+    h2
+      display block
+    font-size 75%
+    article
+      max-width 50em
+  body *
+    color black !important
+  #competencies
+    padding-top 1em
+    h2
+      display block
+    .workingOn
+      font-weight 600

@@ -175,7 +175,8 @@ body {
   font-size: 14pt;
   text-align: left;
 }
-section > h2 {
+section > h2,
+caption > h2 {
   font-size: 200%;
   color: #887763;
   margin-bottom: 0.75em;
@@ -188,37 +189,35 @@ section > h2 {
 }
 body > header {
   display: inline-block;
-  height: 38em;
+  height: 7em;
   width: 38em;
   position: relative;
-  border-right: 1.25em solid #887763;
+  border-right: 1em solid #887763;
 }
 body > header img {
-  position: absolute;
-  width: 19.01em;
-  height: 19.01em;
-  opacity: 0.5;
-}
-body > header img.photo1 {
-  top: 0;
-  left: 0;
-}
-body > header img.photo2 {
-  top: 0;
-  left: 19em;
-}
-body > header img.photo3 {
-  top: 19em;
-  left: 19em;
-}
-body > header img.photo4 {
-  top: 19em;
-  left: 0em;
+  display: none;
+/*
+    position absolute
+    width 19.01em
+    height 19.01em
+    opacity .5
+    &.photo1
+      top 0
+      left 0
+    &.photo2
+      top 0
+      left 19em
+    &.photo3
+      top 19em
+      left 19em
+    &.photo4
+      top 19em
+      left 0em
+    */
 }
 body > header h1 {
   font-size: 400%;
   color: #887763;
-  margin-top: 7.71em;
   margin-left: 0.25em;
   font-family: 'Lora', serif;
 }
@@ -229,8 +228,10 @@ body > header h2 {
   color: #413543;
   font-family: 'Lora', serif;
   display: inline-block;
+  margin-bottom: -0.4em;
 }
 #contactInfo {
+  font-size: 68%;
   display: inline-block;
   width: 15em;
   margin-left: 1em;
@@ -240,7 +241,8 @@ body > header h2 {
   margin-bottom: 0.5em;
 }
 #contactInfo .type,
-#contactInfo .countyCode {
+#contactInfo .countyCode,
+#contactInfo .street-address {
   display: none;
 }
 #contactInfo a {
@@ -255,7 +257,7 @@ cursorhand
   content: '';
 }
 #contactInfo + section {
-  border-top: 1.15em solid #887763;
+  border-top: 1em solid #887763;
 }
 #statement {
   position: relative;
@@ -263,7 +265,7 @@ cursorhand
   padding: 3em 2em;
   color: #655c51;
   text-align: center;
-  border-bottom: 1.25em solid #887763;
+  border-bottom: 1em solid #887763;
   margin-bottom: 1em;
 }
 #statement p {
@@ -459,7 +461,14 @@ body > footer p {
 @media screen and (max-width:570px) {
   #contactInfo {
     font-size: 130%;
-    margin-right: -5em;
+    margin-right: -4em;
+  }
+  body > header {
+    height: 12.7em;
+    vertical-align: top;
+  }
+  body > header h1 {
+    margin-top: 0.7em;
   }
 }
 @media screen and (max-width:860px) {
@@ -482,5 +491,51 @@ body > footer p {
   }
   body > footer {
     font-size: 140%;
+  }
+}
+@media print {
+  body {
+    font-size: 11pt !important;
+    width: 100%;
+    margin: 2em;
+  }
+  body > nav,
+  body > footer,
+  #statement,
+  #contactInfo .social {
+    display: none;
+  }
+  #statement,
+  #contactInfo + section,
+  body > header {
+    border: none;
+  }
+  #statement {
+    font-size: 100%;
+    padding: 0;
+    margin-top: 1em;
+  }
+  #experience {
+    margin-top: 0;
+    padding: 0;
+    font-size: 75%;
+  }
+  #experience h2 {
+    display: block;
+  }
+  #experience article {
+    max-width: 50em;
+  }
+  body * {
+    color: #000 !important;
+  }
+  #competencies {
+    padding-top: 1em;
+  }
+  #competencies h2 {
+    display: block;
+  }
+  #competencies .workingOn {
+    font-weight: 600;
   }
 }
