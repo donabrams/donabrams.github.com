@@ -323,6 +323,73 @@ body > nav.sticky a.active:after {
   border: 0.4em solid transparent;
   border-bottom-color: #887763;
 }
+#projects {
+  font-size: 135%;
+}
+#projects article {
+  width: 39em;
+  margin-left: auto;
+  margin-right: auto;
+}
+#projects article header {
+  text-align: right;
+  vertical-align: top;
+  height: 1.4em;
+  margin-bottom: 1em;
+}
+#projects article header h3 {
+  font-size: 140%;
+  color: #413543;
+  float: left;
+}
+#projects article header a {
+  margin-left: 0.5em;
+  color: #887763;
+  text-decoration: none;
+  font-size: 80%;
+  vertical-align: bottom;
+  line-height: 3em;
+}
+#projects article header a:after {
+  content: "";
+}
+#projects article .description {
+  margin-bottom: 1em;
+  margin-left: 1em;
+  color: #887763;
+}
+#projects article .description p {
+  line-height: 1.4em;
+}
+#projects article .technologies {
+  margin-left: 0.5em;
+  display: inline-block;
+  width: 29em;
+}
+#projects article .technologies h4 {
+  font-size: 120%;
+  margin-bottom: 0.5em;
+}
+#projects article .technologies h4:after {
+  content: ":";
+}
+#projects article .technologies ul li {
+  list-style: disc;
+  margin-left: 2em;
+  color: #887763;
+}
+#projects article .technologies ul li strong {
+  color: #413543;
+}
+#projects article aside {
+  height: 10em;
+  margin: 1em;
+  text-align: center;
+}
+#projects article aside img {
+  height: 8em;
+  margin: 1em;
+}
 #experience .employer,
 #education .employer,
 #experience .degree,
