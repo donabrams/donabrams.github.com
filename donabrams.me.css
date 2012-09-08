@@ -175,11 +175,15 @@ body {
   font-size: 14pt;
   text-align: left;
 }
-section > h2,
-caption > h2 {
+section > h2 {
   font-size: 150%;
   color: #887763;
   margin-bottom: 0.75em;
+  margin-left: 0.4em;
+}
+body > section {
+  margin: -1em 2em 0em 2em;
+  padding-top: 3.5em;
 }
 .vcard .hide {
   display: none;
@@ -264,6 +268,7 @@ cursorhand
 }
 #statement {
   position: relative;
+  margin: 0;
   top: -1px;
   padding: 3em 2em;
   color: #655c51;
@@ -294,7 +299,7 @@ body > nav ul {
 }
 body > nav li {
   display: inline-block;
-  padding-left: 5.5em;
+  padding-left: 1.5em;
 }
 body > nav a {
   color: #887763;
@@ -318,36 +323,41 @@ body > nav.sticky a.active:after {
   border: 0.4em solid transparent;
   border-bottom-color: #887763;
 }
-#experience {
-  margin: -4em 2em 0em 2em;
-  padding-top: 6.5em;
-}
-#experience > h2 {
-  display: none;
-}
-#experience .employer {
+#experience .employer,
+#education .employer,
+#experience .degree,
+#education .degree {
   color: #413543;
   font-size: 125%;
 }
-#experience .dateRange {
+#experience .dateRange,
+#education .dateRange,
+#experience .dateOfCompletion,
+#education .dateOfCompletion {
   float: right;
   color: #413543;
 }
-#experience .jobTitle {
+#experience .jobTitle,
+#education .jobTitle,
+#experience .areaOfStudy,
+#education .areaOfStudy {
   color: #887763;
   margin-top: 0.1em;
   margin-bottom: 0.5em;
 }
-#experience article {
+#experience article,
+#education article {
   margin-left: auto;
   margin-right: auto;
   max-width: 40em;
   margin-bottom: 2em;
 }
-#experience article h1 {
+#experience article h1,
+#education article h1 {
   font-size: 80%;
 }
-#experience ul {
+#experience ul,
+#education ul {
   font-size: 100%;
   margin-left: 1.5em;
   margin-top: 0.5em;
@@ -355,33 +365,28 @@ body > nav.sticky a.active:after {
   list-style: disc;
   color: #887763;
 }
-#experience ul li {
+#experience ul li,
+#education ul li {
   list-style: disc;
   margin-bottom: 0.25em;
 }
-#experience strong {
+#experience strong,
+#education strong {
   color: #413543;
   font-weight: 600;
 }
-#competencies {
-  padding-top: 6.5em;
-  margin: 0 2em;
+#competencies table {
+  font-size: 100%;
+  width: 55em;
 }
-#competencies h2 {
-  display: none;
-}
-#competencies caption {
+#competencies table caption {
   text-align: left;
 }
-#competencies caption p {
+#competencies table caption p {
   font-size: 80%;
   color: #413543;
   margin-left: 0.75em;
   padding-bottom: 1.5em;
-}
-#competencies table {
-  font-size: 100%;
-  width: 98%;
 }
 #competencies table thead th {
   font-size: 100%;
@@ -457,21 +462,18 @@ body > footer p {
   color: #413543;
 }
 @media screen and (max-width:945px) {
-  #experience {
+  #experience,
+  #education {
     font-size: 130%;
+  }
+  #competencies h2 {
+    font-size: 200%;
   }
 }
 @media screen and (max-width:570px) {
   #contactInfo {
     font-size: 130%;
     margin-right: -4em;
-  }
-  body > header {
-    height: 12.7em;
-    vertical-align: top;
-  }
-  body > header h1 {
-    margin-top: 0.7em;
   }
 }
 @media screen and (max-width:860px) {
@@ -491,6 +493,12 @@ body > footer p {
   #competencies {
     margin: 0 1em;
     font-size: 125%;
+  }
+  #competencies h2 {
+    font-size: 130%;
+  }
+  #competencies table {
+    width: 45em;
   }
   body > footer {
     font-size: 140%;

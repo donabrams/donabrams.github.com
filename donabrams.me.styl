@@ -39,10 +39,16 @@ body
   font-size 14pt
   text-align left
 
-section > h2, caption > h2 
-    font-size 150%
-    color headline
-    margin-bottom .75em
+section > h2
+  font-size 150%
+  color headline
+  margin-bottom .75em
+  margin-left .4em
+
+body > section
+  margin -1em 2em 0em 2em
+  padding-top 3.5em
+  
 
 .vcard
   .hide 
@@ -113,6 +119,7 @@ body > header
 
 #statement 
   position relative
+  margin 0
   top -1px
   padding 3em 2em
   p
@@ -139,7 +146,7 @@ body > nav
     text-align center
   li 
     display inline-block
-    padding-left 5.5em
+    padding-left 1.5em
   a 
     color headline
     text-decoration none
@@ -159,18 +166,14 @@ body > nav
       border .4em solid transparent
       border-bottom-color headline
       
-#experience
-  > h2
-    display none
-  margin -4em 2em 0em 2em
-  padding-top 6.5em
-  .employer 
+#experience, #education
+  .employer, .degree
     color secondary
     font-size 125%
-  .dateRange 
+  .dateRange, .dateOfCompletion
     float right
     color secondary
-  .jobTitle 
+  .jobTitle, .areaOfStudy
     color headline
     margin-top .1em
     margin-bottom .5em
@@ -196,20 +199,16 @@ body > nav
     font-weight 600
     
 #competencies
-  padding-top 6.5em 
-  h2
-    display none
-  margin 0 2em
-  caption 
-    text-align left
-    p 
-      font-size 80%
-      color lowimportance
-      margin-left .75em
-      padding-bottom 1.5em
   table
+    caption 
+      text-align left
+      p 
+        font-size 80%
+        color lowimportance
+        margin-left .75em
+        padding-bottom 1.5em
     font-size 100%
-    width 98%
+    width 55em
     thead th 
       font-size 100%
       color headline
@@ -270,18 +269,15 @@ body > footer
   
 // below 945px, lessen the margin on the sides
 @media screen and (max-width:945px)
-  #experience
+  #experience, #education
     font-size 130%
+  #competencies h2
+    font-size 200%
 //below 570 px grow the contact information
 @media screen and (max-width:570px)
   #contactInfo
     font-size 130%
     margin-right -4em
-  body > header
-    height 12.7em
-    vertical-align top
-    h1
-      margin-top .7em
 // below 860px, keep the bold key readable
 @media screen and (max-width:860px)
   #competencies
@@ -299,6 +295,10 @@ body > footer
   #competencies
     margin 0 1em
     font-size 125%
+    h2
+      font-size 130%
+    table
+      width 45em
   body > footer
     font-size 140%
 @media print

@@ -22,7 +22,7 @@
     $("body > nav").waypoint(function(event, direction) {
       $(this).toggleClass('sticky', direction === "down");
     });
-    $.each(["experience", "competencies"], function(i, v) {
+    $.each(["experience", "education", "competencies"], function(i, v) {
       console.log(v);
       $("#" + v).waypoint(function(event, direction) {
         $("body > nav a").removeClass("active")
@@ -61,15 +61,16 @@
   <p class="social">
     <a href="https://twitter.com/DonTAbrams" title="twitter">twitter</a>
     <a href="https://github.com/donabrams" title="github">github</a>
-    <a href="http://donabrams.tumblr.com" title="blog">tumblr</a></p>
+    <a href="http://blog.donabrams.me" title="blog">tumblr</a></p>
 </section>
 <section id="statement">
     <p>I develop software to increase quality of life</p>
 </section>
 <nav>
   <ul>
-    <!--li><a href="#projects" title="Go to Projects">Projects</a></li-->
+    <li><a href="#projects" title="Go to Projects">Projects</a></li>
     <li><a href="#experience" title="Go to Experience">Experience</a></li>
+    <li><a href="#education" title="Go to Education">Education</a></li>
     <li><a href="#competencies" title="Go to Technical Competencies">Technical Competencies</a></li>
   </ul>
 </nav>
@@ -136,10 +137,25 @@
       </ul>
     </article>
   </section>
+  <section id="education">
+    <h2>Education</h2>
+    <article>
+      <header>
+        <h1 class="dateOfCompletion">December 2007</h2>
+        <h2 class="degree">Computer and Information Science</h1>
+        <h3 class="areaOfStudy">Bachelor's of Science</h3>
+      </header>
+      <ul>
+        <li>Minor in Mathematics</li>
+        <li>Concentration in Robotics</li>
+        <li>13 credits short of a Mechanical Engineering Bachelor's</li>
+      </ul>
+    </article>
+  </section>
   <section id="competencies">
+    <h2>Technical Competencies</h2>
     <table>
       <caption>
-        <h2>Technical Competencies</h2>
         <p><span class="workingOn">Bolded</span> competencies are ones I am currently working with.</p>
       </caption>
       <thead>
@@ -264,7 +280,6 @@
       </tbody>
     </table>
   </section>
-</section>
 <footer>
   <nav><a href="#">top</a>
   <p>&copy; 2012 Donald Abrams</p>
