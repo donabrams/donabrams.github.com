@@ -22,13 +22,14 @@
     $("body > nav").waypoint(function(event, direction) {
       $(this).toggleClass('sticky', direction === "down");
     });
-    $.each(["experience", "education", "competencies"], function(i, v) {
-      console.log(v);
-      $("#" + v).waypoint(function(event, direction) {
+    $.each(["projects", "experience", "education", "competencies"], function(i, v) {
+      var setActive = function() {
         $("body > nav a").removeClass("active")
           .filter("[href='#" + v + "']")
           .addClass("active");
-        }, {offset: '15%'});
+      };
+      $("#" + v).waypoint(setActive, {offset: '15%', onlyOnScroll: true, continuous: false});
+      $("body > nav a[href='#" + v + "']").click(setActive);
     });
   });
   </script>
@@ -173,7 +174,7 @@
     <ul>
       <li>Minor in Mathematics</li>
       <li>Concentration in Robotics</li>
-      <li>13 credits short of a Mechanical Engineering Bachelor's</li>
+      <li>13 credits short of a Mechanical Engineering Bachelor's (not as much fun as computer science)</li>
     </ul>
   </article>
 </section>
