@@ -16,9 +16,9 @@ $ ->
   $("#start").click ->
     firstVideo.show 'slow', ->
       this.play()
-  $.ajax("eyemaginations.jade").then (data)->
+  $.ajax("index.jade").then (data)->
     $("#jade code").text(data)
-  $.ajax("eyemagination.styl").then (data)->
+  $.ajax("eyemaginations.styl").then (data)->
     $("#stylus code").text(data)
-  $.ajax("eyemagination.coffee").then (data)->
+  $.ajax("eyemaginations.coffee").then (data)->
     $("#coffee code").text(data)

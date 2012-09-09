@@ -30,13 +30,13 @@
         return this.play();
       });
     });
-    $.ajax("eyemaginations.jade").then(function(data) {
+    $.ajax("index.jade").then(function(data) {
       return $("#jade code").text(data);
     });
-    $.ajax("eyemagination.styl").then(function(data) {
+    $.ajax("eyemaginations.styl").then(function(data) {
       return $("#stylus code").text(data);
     });
-    return $.ajax("eyemagination.coffee").then(function(data) {
+    return $.ajax("eyemaginations.coffee").then(function(data) {
       return $("#coffee code").text(data);
     });
   });
