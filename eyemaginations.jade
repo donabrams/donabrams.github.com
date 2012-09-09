@@ -1,0 +1,31 @@
+!!! 5
+html
+  head
+    title Eyemaginations Code Sample - Donald Abrams
+    link(rel='stylesheet', href='highlight-github.css')
+    link(rel='stylesheet', href='eyemagination.css')
+    script(src='jquery-1.8.1.min.js')
+    script(src='eyemagination.js')
+  body
+    header
+      h1 Eyemaginations Code Sample
+      h2 Donald Abrams
+    section#banner
+      p Please note that this currently does not work in firefox as the specs called for a mp4. 
+      button#start start
+      .videoContainer
+        video#first(controls="controls", preload="auto")
+          source(src="http://static.clipcanvas.com/sample/clipcanvas_14348_H264_640x360.mp4", type="video/mp4")
+        img#intermediate(src="sneakysnake.gif")
+        video#second.video-js.vjs-default-skin(controls="controls", preload="auto")
+          source(src="http://video-js.zencoder.com/oceans-clip.mp4", type="video/mp4")
+    section#source
+      h3 eyemaginations.jade
+      pre#jade
+        code.jade
+      h3 eyemagination.styl
+      pre#stylus
+        code.stylus
+      h3 eyemagination.coffee
+      pre#coffee
+        code.coffeescript

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eyemaginations Code Sample - Donald Abrams</title>
+    <link rel="stylesheet" href="highlight-github.css">
+    <link rel="stylesheet" href="eyemagination.css">
+    <script src="jquery-1.8.1.min.js"></script>
+    <script src="eyemagination.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Eyemaginations Code Sample</h1>
+      <h2>Donald Abrams</h2>
+    </header>
+    <section id="banner">
+      <p>Please note that this currently does not work in firefox as the specs called for a mp4. </p>
+      <button id="start">start</button>
+      <div class="videoContainer">
+        <video id="first" controls="controls" preload="auto">
+          <source src="http://static.clipcanvas.com/sample/clipcanvas_14348_H264_640x360.mp4" type="video/mp4">
+        </video><img id="intermediate" src="sneakysnake.gif">
+        <video id="second" controls="controls" preload="auto" class="video-js vjs-default-skin">
+          <source src="http://video-js.zencoder.com/oceans-clip.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+    <section id="source">
+      <h3>eyemaginations.jade</h3>
+      <pre id="jade"><code class="jade"></code></pre>
+      <h3>eyemagination.styl</h3>
+      <pre id="stylus"><code class="stylus"></code></pre>
+      <h3>eyemagination.coffee</h3>
+      <pre id="coffee"><code class="coffeescript"></code></pre>
+    </section>
+  </body>
+</html>
