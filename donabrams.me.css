@@ -173,7 +173,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   background-color: #eee;
   font-size: 14pt;
-  text-align: left;
+  text-align: center;
 }
 section > h2 {
   font-size: 150%;
@@ -184,6 +184,7 @@ section > h2 {
 body > section {
   margin: -1em 2em 0em 2em;
   padding-top: 3.5em;
+  text-align: left;
 }
 .vcard .hide {
   display: none;
@@ -193,41 +194,51 @@ body > section {
 }
 body > header {
   display: inline-block;
-  height: 38em;
-  width: 38em;
+  height: 22.5em;
+  width: 42em;
   position: relative;
-  border-right: 1em solid #887763;
 }
 body > header img {
+  z-index: 1;
+  transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  -moz-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
   position: absolute;
-  width: 19.01em;
-  height: 19.01em;
-  opacity: 0.5;
-}
-body > header img.photo {
-  top: 0;
-  left: 0;
-}
-body > header img.photo2 {
-  top: 0;
-  left: 19em;
-}
-body > header img.photo3 {
-  top: 19em;
-  left: 19em;
+  width: 12em;
+  height: 12em;
+  float: left;
+  opacity: 0.4;
 }
 body > header img.photo4 {
-  top: 19em;
-  left: 0em;
+  top: 2em;
+  left: -2em;
+}
+body > header img.photo2 {
+  top: 2em;
+  left: 13em;
+}
+body > header img.photo {
+  top: 2em;
+  left: 28em;
+}
+body > header img.photo3 {
+  top: 2em;
+  left: 43em;
 }
 body > header h1 {
+  position: relative;
+  z-index: 2;
   font-size: 400%;
   color: #887763;
-  margin-top: 7.75em;
+  margin-top: 4em;
   margin-left: 0.25em;
   font-family: 'Lora', serif;
 }
 body > header h2 {
+  position: relative;
+  z-index: 2;
   margin-left: 1em;
   margin-top: -0.5em;
   font-size: 225%;
@@ -240,7 +251,8 @@ body > header h2 {
   font-size: 68%;
   display: inline-block;
   width: 15em;
-  margin-left: 1em;
+  margin-left: auto;
+  margin-right: auto;
   color: #887763;
 }
 #contactInfo p {
@@ -263,10 +275,9 @@ cursorhand
 #contactInfo .social a:last-child:after {
   content: '';
 }
-#contactInfo + section {
-  border-top: 1em solid #887763;
-}
+#contactInfo + section,
 #statement {
+  display: none;
   position: relative;
   margin: 0;
   top: -1px;
@@ -276,11 +287,13 @@ cursorhand
   border-bottom: 1em solid #887763;
   margin-bottom: 1em;
 }
+#contactInfo + section p,
 #statement p {
   font-size: 220%;
   line-height: 1.5em;
 }
 body > nav {
+  margin-top: 3em;
   font-size: 125%;
   line-height: 200%;
   width: 100%;
@@ -327,7 +340,7 @@ body > nav.sticky a.active:after {
   font-size: 135%;
 }
 #projects article {
-  width: 39em;
+  width: 35em;
   margin-left: auto;
   margin-right: auto;
 }
