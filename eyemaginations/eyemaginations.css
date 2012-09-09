@@ -202,6 +202,12 @@ body > header h2 {
 #banner #intermediate {
   display: none;
 }
+#banner p {
+  font-size: 80%;
+  text-align: left;
+  width: 50em;
+  margin: 0 auto;
+}
 #source {
   margin-top: 2em;
   text-align: left;
