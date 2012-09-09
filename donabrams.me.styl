@@ -72,16 +72,16 @@ body > header
     opacity .4
     &.photo4
       top 2em
-      left -2em
+      left -2.3em
     &.photo2
       top 2em
-      left 13em
+      left 12.7em
     &.photo
       top 2em
-      left 28em
+      left 27.7em
     &.photo3
       top 2em
-      left 43em
+      left 42.7em
   h1
     position relative
     z-index 2
@@ -108,7 +108,7 @@ body > header
   margin-left auto
   margin-right auto
   p
-    margin-bottom .5em
+    margin-bottom .4em
   color headline
   .type, .countyCode, .street-address, .web
     display none
@@ -121,22 +121,6 @@ body > header
       content: ' .'
     &:last-child:after
       content: ''
-
-#contactInfo + section
-
-#statement 
-  display none
-  position relative
-  margin 0
-  top -1px
-  padding 3em 2em
-  p
-    font-size 220%
-    line-height 1.5em
-  color labelcolor
-  text-align center
-  border-bottom 1em solid headline
-  margin-bottom 1em
 
 body > nav
   margin-top 3em
@@ -176,9 +160,9 @@ body > nav
       border-bottom-color headline
       
 #projects
-  font-size 135%
   article
-    width 35em
+    font-size 105%
+    width 38.5em
     margin-left auto
     margin-right auto
     header
@@ -332,15 +316,24 @@ body > footer
   
 // below 945px, lessen the margin on the sides
 @media screen and (max-width:945px)
-  #experience, #education
-    font-size 130%
+  #experience, #education, #projects
+    article
+      font-size 130%
   #competencies h2
-    font-size 200%
+    table
+      font-size 200%
 //below 570 px grow the contact information
 @media screen and (max-width:570px)
+  body > header
+    width 38em
+    height 24em
+    h1
+      margin-top 4.5em
   #contactInfo
     font-size 130%
     margin-right -4em
+    p
+      margin-bottom 0
 // below 860px, keep the bold key readable
 @media screen and (max-width:860px)
   #competencies
