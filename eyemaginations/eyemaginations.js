@@ -2,10 +2,11 @@
 (function() {
 
   $(function() {
-    var appendSource, file, firstVideo, secondVideo, sourceTemplate, video, videoContainer, _i, _j, _len, _len1, _ref, _ref1, _results;
+    var appendSource, file, firstVideo, intermediate, secondVideo, sourceTemplate, video, videoContainer, _i, _j, _len, _len1, _ref, _ref1, _results;
     videoContainer = $(".videoContainer");
     firstVideo = $("#first");
     secondVideo = $("#second");
+    intermediate = $("#intermediate");
     _ref = [firstVideo, secondVideo];
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
       video = _ref[_i];
@@ -13,10 +14,10 @@
       video.attr("width", videoContainer.width());
     }
     firstVideo.on("ended", function() {
-      return $("#first").hide('slow', function() {
-        return $("#intermediate").show('slow', function() {
+      return firstVideo.hide('slow', function() {
+        return intermediate.show('slow', function() {
           return setTimeout(function() {
-            return $("#intermediate").hide('slow', function() {
+            return intermediate.hide('slow', function() {
               return secondVideo.show('slow', function() {
                 return this.play();
               });
