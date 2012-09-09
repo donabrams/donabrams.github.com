@@ -16,9 +16,12 @@ $ ->
   $("#start").click ->
     firstVideo.show 'slow', ->
       this.play()
-  $.ajax("index.jade").then (data)->
-    $("#jade code").text(data)
-  $.ajax("eyemaginations.styl").then (data)->
-    $("#stylus code").text(data)
-  $.ajax("eyemaginations.coffee").then (data)->
-    $("#coffee code").text(data)
+  sourceTemplate = _.template $("#sourceTemplate").text()
+  appendSource = (file) ->
+    $.ajax(file).then (data) ->
+      $("#source").append sourceTemplate
+        data: 
+          filename: file
+          code: data
+  for file in ["index.jade", "eyemaginations.styl", "eyemaginations.coffee"]
+    appendSource file

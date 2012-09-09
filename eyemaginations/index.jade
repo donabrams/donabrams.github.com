@@ -5,6 +5,14 @@ html
     link(rel='stylesheet', href='highlight-github.css')
     link(rel='stylesheet', href='eyemaginations.css')
     script(src='../jquery-1.8.1.min.js')
+    script(src='underscore-min.js')
+    != "<script type='template/underscore' id='sourceTemplate'>"
+    article.source-file
+    h3 <%-data.filename %>
+    pre
+      code
+        <%-data.code %>
+    != "</script>"
     script(src='eyemaginations.js')
   body
     header
@@ -20,12 +28,3 @@ html
         video#second(controls="controls", preload="auto")
           source(src="https://dl.dropbox.com/u/37618032/videos/oceans-clip.mp4", type="video/mp4")
     section#source
-      h3 index.jade
-      pre#jade
-        code.jade
-      h3 eyemagination.styl
-      pre#stylus
-        code.stylus
-      h3 eyemagination.coffee
-      pre#coffee
-        code.coffeescript

@@ -2,7 +2,7 @@
 (function() {
 
   $(function() {
-    var firstVideo, secondVideo, video, videoContainer, _i, _len, _ref;
+    var appendSource, file, firstVideo, secondVideo, sourceTemplate, video, videoContainer, _i, _j, _len, _len1, _ref, _ref1, _results;
     videoContainer = $(".videoContainer");
     firstVideo = $("#first");
     secondVideo = $("#second");
@@ -30,15 +30,24 @@
         return this.play();
       });
     });
-    $.ajax("index.jade").then(function(data) {
-      return $("#jade code").text(data);
-    });
-    $.ajax("eyemaginations.styl").then(function(data) {
-      return $("#stylus code").text(data);
-    });
-    return $.ajax("eyemaginations.coffee").then(function(data) {
-      return $("#coffee code").text(data);
-    });
+    sourceTemplate = _.template($("#sourceTemplate").text());
+    appendSource = function(file) {
+      return $.ajax(file).then(function(data) {
+        return $("#source").append(sourceTemplate({
+          data: {
+            filename: file,
+            code: data
+          }
+        }));
+      });
+    };
+    _ref1 = ["index.jade", "eyemaginations.styl", "eyemaginations.coffee"];
+    _results = [];
+    for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
+      file = _ref1[_j];
+      _results.push(appendSource(file));
+    }
+    return _results;
   });
 
 }).call(this);
