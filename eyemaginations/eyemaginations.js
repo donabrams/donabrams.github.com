@@ -27,9 +27,10 @@
       });
     });
     $("#start").click(function() {
-      return firstVideo.show('slow', function() {
+      firstVideo.show('slow', function() {
         return this.play();
       });
+      return $(this).remove();
     });
     sourceTemplate = _.template($("#sourceTemplate").text());
     appendSource = function(file) {

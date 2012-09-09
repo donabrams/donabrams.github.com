@@ -14,12 +14,13 @@ $ ->
         setTimeout ->
             intermediate.hide 'slow', ->
               secondVideo.show 'slow', ->
-                this.play() 
+                this.play()
           , 10000
   # hit off the first video
   $("#start").click ->
     firstVideo.show 'slow', ->
       this.play()
+    $(this).remove()
   # append source to bottom 
   sourceTemplate = _.template $("#sourceTemplate").text()
   appendSource = (file) ->
