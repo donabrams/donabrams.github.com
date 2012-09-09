@@ -355,6 +355,10 @@ body > nav.sticky a.active:after {
 #projects article .description p {
   line-height: 1.4em;
 }
+#projects article .description ol {
+  list-style-type: decimal;
+  margin: 0.5em 0 0.5em 2em;
+}
 #projects article .technologies {
   margin-left: 0.5em;
   display: inline-block;
