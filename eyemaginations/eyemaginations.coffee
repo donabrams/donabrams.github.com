@@ -7,7 +7,9 @@ $ ->
   for video in [firstVideo, secondVideo]
     video.attr("height", videoContainer.height())
     video.attr("width", videoContainer.width())
-  # As per instructions animate between all 3 videos
+  # As per instructions play first video, then display img, 
+  # then play second video on 10 sec delay
+  # with animation transition between
   firstVideo.on "ended", ->
     firstVideo.hide 'slow', ->
       intermediate.show 'slow', ->
