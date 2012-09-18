@@ -175,11 +175,18 @@ body {
   font-size: 14pt;
   text-align: center;
 }
-section > h2 {
+section > header {
+  text-align: center;
+  width: 100%;
+}
+section > header h2 {
+  display: inline-block;
   font-size: 150%;
   color: #887763;
   margin-bottom: 0.75em;
   margin-left: 0.4em;
+  text-align: left;
+  width: 30em;
 }
 body > section {
   margin: -1em 2em 0em 2em;
@@ -324,6 +331,7 @@ body > nav.sticky a.active:after {
   width: 38.5em;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2em;
 }
 #projects article header {
   text-align: right;
@@ -347,6 +355,13 @@ body > nav.sticky a.active:after {
 #projects article header a:after {
   content: "";
 }
+#projects article a {
+  color: #413543;
+  text-decoration: none;
+}
+#projects article a:hover {
+  color: #413543;
+}
 #projects article .description {
   margin-bottom: 1em;
   margin-left: 1em;
@@ -362,10 +377,10 @@ body > nav.sticky a.active:after {
 #projects article .technologies {
   margin-left: 0.5em;
   display: inline-block;
-  width: 29em;
+  width: 35em;
 }
 #projects article .technologies h4 {
-  font-size: 120%;
+  font-size: 115%;
   margin-bottom: 0.5em;
 }
 #projects article .technologies h4:after {
@@ -450,7 +465,7 @@ body > nav.sticky a.active:after {
 #competencies table caption p {
   font-size: 80%;
   color: #413543;
-  margin-left: 0.75em;
+  margin-left: 10em;
   padding-bottom: 1.5em;
 }
 #competencies table thead th {
@@ -534,6 +549,13 @@ body > footer p {
   }
   #competencies h2 table {
     font-size: 200%;
+  }
+  section > header h2 {
+    font-size: 200%;
+    width: 40em;
+  }
+  #competencies table caption p {
+    margin-left: 2.6em;
   }
 }
 @media screen and (max-width:570px) {

@@ -39,11 +39,17 @@ body
   font-size 14pt
   text-align center
 
-section > h2
-  font-size 150%
-  color headline
-  margin-bottom .75em
-  margin-left .4em
+section > header
+  text-align center
+  width 100%
+  h2
+    display inline-block
+    font-size 150%
+    color headline
+    margin-bottom .75em
+    margin-left .4em
+    text-align left
+    width 30em
 
 body > section
   margin -1em 2em 0em 2em
@@ -165,10 +171,12 @@ body > nav
     width 38.5em
     margin-left auto
     margin-right auto
+    margin-bottom 2em
     header
       text-align right
       vertical-align top
       height 1.4em
+      margin-bottom 1em
       h3
         font-size 140%
         color secondary
@@ -182,8 +190,11 @@ body > nav
         line-height 3em
         &:after
           content ""
-          
-      margin-bottom 1em
+    a
+      color secondary
+      text-decoration none
+      &:hover
+        color secondary
     .description
       margin-bottom 1em
       margin-left 1em
@@ -196,9 +207,9 @@ body > nav
     .technologies
       margin-left .5em
       display inline-block
-      width 29em
+      width 35em
       h4
-        font-size 120%
+        font-size 115%
         &:after
           content ":"
         margin-bottom .5em
@@ -255,7 +266,7 @@ body > nav
       p 
         font-size 80%
         color lowimportance
-        margin-left .75em
+        margin-left 10em
         padding-bottom 1.5em
     font-size 100%
     width 55em
@@ -325,6 +336,11 @@ body > footer
   #competencies h2
     table
       font-size 200%
+  section > header h2
+    font-size 200%
+    width 40em
+  #competencies table caption p
+    margin-left 2.6em
 //below 570 px grow the contact information
 @media screen and (max-width:570px)
   body > header
