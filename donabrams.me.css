@@ -217,6 +217,9 @@ body > header img {
   height: 12em;
   float: left;
   opacity: 0.4;
+  border-radius: 8em;
+  -webkit-border-radius: 8em;
+  -moz-border-radius: 8em;
 }
 body > header img.photo4 {
   top: 2em;
